@@ -9,11 +9,14 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Easybank landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- Google Fonts link -->
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="/app/scss/style.css" type="text/css">
+  <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
   <style>
     .attribution {
-      font-size: 11px;
+      font-size: .6875rem;
       text-align: center;
     }
 
@@ -24,14 +27,33 @@
 </head>
 
 <body>
+  <header class="header">
+    <nav class="flex flex-jc-sb flex-ai-c">
+      <a href="/" class="header__logo">
+        <img src="/images/logo.svg" alt="Easybank Logo">
+      </a>
+      <a href="#" class="header__menu hide-for-desktop">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
 
-  Home
-  About
-  Contact
-  Blog
-  Careers
+      <div class="header__links hide-for-mobile">
+        <a href="#">Home</a><a href="#">About</a><a href="#">Contact</a><a href="#">Blog</a><a href="#">Careers</a>
+      </div>
 
-  Request Invite
+      <button type="button" class="hide-for-mobile">Request Invite</button>
+    </nav>
+  </header>
+
+  <!--
+
+
+
+
+
+
+
 
 
 
@@ -101,11 +123,12 @@
   Request Invite
 
   © Easybank. All Rights Reserved
-
+-->
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://www.linkedin.com/in/melissaugrai/">Melissa Ugrai</a>.
+    Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="/app/js/script.js"></script>
 </body>
 
 </html>

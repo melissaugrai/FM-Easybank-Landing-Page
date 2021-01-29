@@ -1,0 +1,65 @@
+.header {
+
+    nav {
+        padding: 1.125rem 1.5rem;
+
+    }
+
+    &__logo {
+        img {
+            width: 8.6875rem;
+            height: 1.25rem;
+        }
+    }
+
+    &__menu {
+
+        //Mobile Menu
+        >span {
+            display: block;
+            width: 1.5rem;
+            height: .0625rem;
+            background-color: $darkBlue;
+
+            &:not(:last-child) {
+                margin-bottom: .25rem;
+            }
+        }
+    }
+
+    &__links {
+        a {
+            position: relative;
+            font-size: $font-sm;
+            color: $grayishBlue;
+            transition: color 300ms ease-in-out;
+            
+            &:not(:last-child) {
+                margin-right: 1.875rem;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                height: .3125rem;                
+                left: 0;
+                right: 0;
+                bottom: -1.875rem;
+                background: linear-gradient(135deg, $limeGreen 0%, $brightCyan 99.58%);
+                opacity: 0;
+                transition: color 300ms ease-in-out;
+            }
+
+            &:hover {
+                color: $darkBlue;
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+
+
+    }
+}
