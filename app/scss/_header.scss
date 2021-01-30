@@ -1,5 +1,37 @@
 .header {
 
+    //Hamburger Open Styles
+    &.open {
+
+        .header__menu {
+            >span:first-child {
+                //top line
+                transform: rotate(45deg);
+            }
+
+            >span:nth-child(2) {
+                //middle line
+                opacity: 0;
+            }
+
+            >span:last-child {
+                //bottom line
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .overlay {
+        opacity: 0;
+        position: fixed;
+        top: 4rem;
+        right: 0rem;
+        bottom: 0rem;
+        left: 0rem;
+        background-image: linear-gradient($darkBlue, transparent);
+      
+    }
+
     nav {
         padding: 1.125rem 1.5rem;
 
@@ -20,11 +52,15 @@
             width: 1.5rem;
             height: .0625rem;
             background-color: $darkBlue;
+            transition: all ease-in-out;
+            transform-origin: .3rem .0625rem;
 
             &:not(:last-child) {
                 margin-bottom: .25rem;
             }
         }
+
+
     }
 
     &__links {
@@ -33,7 +69,7 @@
             font-size: $font-sm;
             color: $grayishBlue;
             transition: color 300ms ease-in-out;
-            
+
             &:not(:last-child) {
                 margin-right: 1.875rem;
             }
@@ -42,7 +78,7 @@
                 content: "";
                 position: absolute;
                 display: block;
-                height: .3125rem;                
+                height: .3125rem;
                 left: 0;
                 right: 0;
                 bottom: -1.875rem;
@@ -59,7 +95,5 @@
                 }
             }
         }
-
-
     }
 }
