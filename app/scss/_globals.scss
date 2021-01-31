@@ -17,11 +17,66 @@ body {
     color: $grayishBlue;
     line-height: 1.3;
 
+    &.noScroll {
+        overflow: hidden;
+    }
+
 }
-a, a:visited, a:hover {
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+
+
+
+a,
+a:visited,
+a:hover {
     text-decoration: none;
-    
+
 }
+
+//Spacing
+.container {
+    max-width: 69.375rem;
+    margin: 0 auto;
+
+    &--pall {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    &--py {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    &--px {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    &--pt {
+        padding-top: 2.5rem;
+    }
+
+    &--pr {
+        padding-right: 1.5rem;
+    }
+
+    &--pb {
+        padding-bottom: 2.5rem;
+    }
+
+    &--pl {
+        padding-left: 1.5rem;
+    }
+}
+
 
 //Flexbox
 .flex {
@@ -43,7 +98,8 @@ a, a:visited, a:hover {
 
 //Button Styles
 
-button, .button {
+button,
+.button {
     padding: .5rem 2.125rem .5rem 2.0625rem;
     background: linear-gradient(135deg, $limeGreen 0%, $brightCyan 99.58%);
     border: 0;
@@ -55,7 +111,8 @@ button, .button {
     line-height: 1.75rem;
     opacity: 1;
     transition: opacity 200ms ease-in-out;
-    
+    display: inline-block;
+
     &:hover {
         opacity: 0.4;
     }
@@ -63,6 +120,7 @@ button, .button {
 
 //Visibility
 .hide-for-mobile {
+
     //hide for tablet and mobile
     @include breakpoint-down(medium) {
         display: none;
@@ -70,6 +128,7 @@ button, .button {
 }
 
 .hide-for-desktop {
+
     //hide for desktop viewpoints widths
     @include breakpoint-up(large) {
         display: none;
