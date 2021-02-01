@@ -84,33 +84,6 @@
             order: 1;
             text-align: left;
         }
-
-        h1 {
-            font-weight: 300;
-            color: $darkBlue;
-            font-size: 2.5rem;
-            line-height: 2.9375rem;
-            letter-spacing: -0.044643rem;
-            margin-bottom: 1rem;
-
-            @include breakpoint-up(large) {
-                font-size: $font-xlg;
-                line-height: 4rem;
-                letter-spacing: -0.0625rem;
-            }
-        }
-
-        p {
-            line-height: 1.5625rem;
-            font-size: .9375rem;
-            letter-spacing: -0.014648rem;
-            margin-bottom: 2rem;
-
-            @include breakpoint-up(large) {
-                font-size: $font-med;
-                line-height: 1.75rem;
-                letter-spacing: -0.017578rem;
-            }
-        }
+      
     }
 }

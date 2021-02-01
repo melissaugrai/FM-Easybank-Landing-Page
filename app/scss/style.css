@@ -102,6 +102,56 @@ h1,
 h2,
 h3 {
   margin-top: 0;
+  line-height: 2.375rem;
+  font-weight: 300;
+  color: #2d314d;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: -0.044643rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 64em) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    letter-spacing: -1px;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: -0.035714rem;
+  text-align: center;
+}
+
+@media (min-width: 64em) {
+  h2 {
+    font-size: 2.5rem;
+    line-height: 4rem;
+    letter-spacing: -0.044643rem;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+}
+
+p {
+  line-height: 1.5625rem;
+  font-size: .9375rem;
+  letter-spacing: -0.014648rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 64em) {
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: -0.017578rem;
+    text-align: left;
+  }
 }
 
 a,
@@ -116,15 +166,29 @@ a:hover {
 }
 
 .container--pall {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
 }
 
+@media (min-width: 64em) {
+  .container--pall {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
 .container--py {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 64em) {
+  .container--py {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 }
 
 .container--px {
@@ -133,7 +197,13 @@ a:hover {
 }
 
 .container--pt {
-  padding-top: 2.5rem;
+  padding-top: 4rem;
+}
+
+@media (min-width: 64em) {
+  .container--pt {
+    padding-top: 6rem;
+  }
 }
 
 .container--pr {
@@ -141,7 +211,13 @@ a:hover {
 }
 
 .container--pb {
-  padding-bottom: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 64em) {
+  .container--pb {
+    padding-bottom: 6rem;
+  }
 }
 
 .container--pl {
@@ -414,35 +490,106 @@ button:hover,
   }
 }
 
-.hero__text h1 {
+.feature {
+  background-color: #f3f4f6;
+}
+
+.feature__intro {
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 64em) {
+  .feature__intro {
+    margin-bottom: 4.5rem;
+    width: 60%;
+  }
+}
+
+.feature__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 40em) {
+  .feature__grid {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+}
+
+@media (min-width: 64em) {
+  .feature__grid {
+    width: 1110px;
+  }
+}
+
+.feature__item {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 40em) {
+  .feature__item {
+    width: 43%;
+    text-align: left;
+  }
+}
+
+@media (min-width: 64em) {
+  .feature__item {
+    margin-bottom: 0;
+    width: 23%;
+  }
+}
+
+.feature__icon {
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 64em) {
+  .feature__icon {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.feature__title {
+  font-size: 1.25rem;
   font-weight: 300;
+  line-height: 1.75rem;
   color: #2d314d;
-  font-size: 2.5rem;
-  line-height: 2.9375rem;
-  letter-spacing: -0.044643rem;
+  letter-spacing: -0.022321rem;
   margin-bottom: 1rem;
 }
 
 @media (min-width: 64em) {
-  .hero__text h1 {
-    font-size: 3.5rem;
-    line-height: 4rem;
-    letter-spacing: -0.0625rem;
+  .feature__title {
+    font-size: 1.5rem;
+    letter-spacing: -0.026786rem;
+    margin-bottom: 1.625rem;
   }
 }
 
-.hero__text p {
-  line-height: 1.5625rem;
-  font-size: .9375rem;
-  letter-spacing: -0.014648rem;
-  margin-bottom: 2rem;
+.feature__description {
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.234375px;
 }
 
 @media (min-width: 64em) {
-  .hero__text p {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-    letter-spacing: -0.017578rem;
+  .feature__description {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.25px;
   }
 }
 /*# sourceMappingURL=style.css.map */
