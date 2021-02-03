@@ -24,14 +24,14 @@
         }
 
         @include breakpoint-up(large) {
-            width: 1110px;
+            width: 69.375rem;
         }
     }
 
 
     &__item {
         text-align: center;
-        margin-bottom: 32px;
+        margin-bottom: 2rem;
 
         @include breakpoint-up(medium) {
             width: 43%;
@@ -70,14 +70,14 @@
     }
 
     &__description {
-        font-size: 15px;
-        line-height: 25px;
-        letter-spacing: -0.234375px;
+        font-size: .9375rem;
+        line-height: 1.5625rem;
+        letter-spacing: -0.014648rem;
 
         @include breakpoint-up(large) {
-            font-size: 16px;
-            line-height: 26px;
-            letter-spacing: -0.25px;
+            font-size: 1rem;
+            line-height: 1.625rem;
+            letter-spacing: -0.015625rem;
         }
     }
 }
