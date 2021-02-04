@@ -1,24 +1,28 @@
 .footer {
     background-color: $darkBlue;
     color: $white;
-    padding: 2.5rem;
     text-align: center;
 
-    @include breakpoint-up(large){
-        padding: 3rem;
+
+    @include breakpoint-up(large) {
+        text-align: left;
     }
 
 
     .container {
-        @include breakpoint-up(large) {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 2fr;
-            grid-template-rows: 1fr auto;
-            grid-template-areas:
-                "logo links1 links2 cta"
-                "social links1 links2 copyright";
-            justify-items: start;
+        flex-direction: column;
 
+        @include breakpoint-up(large) {
+            flex-direction: row;
+            height: 5.9375rem;
+        }
+    }
+
+    .desktopLayout {
+        flex-direction: column;
+
+        @include breakpoint-up(large) {
+            justify-content: space-between;
         }
     }
 
@@ -39,18 +43,25 @@
     }
 
     &__social {
+        height: 1.5rem;
 
         @include breakpoint-down(medium) {
             margin-bottom: 2rem;
         }
 
         @include breakpoint-up(large) {
-            grid-area: social;
+
             align-self: end;
+            height: 1.25rem;
         }
 
         a {
             display: inline-block;
+            height: 1.5rem;
+
+            @include breakpoint-up(large) {
+                height: 1.25rem;
+            }
         }
 
         svg path {
@@ -58,8 +69,11 @@
         }
 
         a:not(:last-child) {
-
             margin-right: 1rem;
+
+            @include breakpoint-up(large) {
+                margin-right: .8125rem;
+            }
         }
 
         a:hover svg path {
@@ -72,7 +86,7 @@
 
             @include breakpoint-up(medium) {
                 height: 1.25rem;
-                width: 1.5rem;
+                width: 1.25rem;
             }
         }
 
@@ -88,13 +102,10 @@
         @include breakpoint-up(large) {
             justify-content: space-between;
             align-items: start;
-
         }
 
         &.col1 {
-            @include breakpoint-up(large) {
-                grid-area: links1;
-            }
+            @include breakpoint-up(large) {}
         }
 
         &.col2 {
@@ -104,13 +115,16 @@
             }
 
             @include breakpoint-up(large) {
-                grid-area: links2;
+                padding-right: 200px;
             }
         }
 
         a {
-            line-height: 2.25rem;
+            line-height: 26px;
+            letter-spacing: -0.234375px;
+            margin-bottom: 8px;
             transition: color 150ms ease-in-out;
+
         }
 
         a:hover {
@@ -120,16 +134,16 @@
     }
 
     &__cta {
+        flex-direction: column;
 
         @include breakpoint-up(large) {
             text-align: right;
-            grid-area: cta;
-            justify-self: end;
+            justify-content: space-between;
+
+
         }
 
         a.button {
-
-
             @include breakpoint-down(medium) {
                 margin-bottom: 1.5rem;
             }
@@ -141,11 +155,6 @@
         letter-spacing: -0.014648rem;
         opacity: 0.5;
 
-        @include breakpoint-up(large) {
-            grid-area: copyright;
-            align-self: end;
-            justify-self: end;
-
-        }
+        @include breakpoint-up(large) {}
     }
 }

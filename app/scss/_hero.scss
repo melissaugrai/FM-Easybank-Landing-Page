@@ -43,8 +43,8 @@
                 background-repeat: no-repeat;
                 background-position: center bottom;
                 width: 150%;
-                background-size: 122%;
-                background-position: 0% 83%;
+                background-size: 125%;
+                background-position: -7% 71%;
             }
         }
 
@@ -65,10 +65,10 @@
 
             @include breakpoint-up(large) {
                 width: 120%;
-                height: 122%;
-                background-size: 95%;
+                height: 129%;
+                background-size: 96%;
                 background-position: center 137%;
-                left: 29%;
+                left: 27%;
             }
         }
     }
@@ -83,6 +83,8 @@
             flex: 2;
             order: 1;
             text-align: left;
+            padding-top: 0;
+            padding-bottom: 0;
         }
 
     }

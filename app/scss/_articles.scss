@@ -1,8 +1,17 @@
-.articles {
-    background-color: $veryLightGray;
-}
-
 .article {
+    background-color: $veryLightGray;
+
+    &__content {
+        @include breakpoint-up(large) {
+            padding-top: 4.875rem;
+            padding-bottom: 5rem;
+        }
+
+    }
+
+    h2 {
+        margin-bottom: 2.5rem;
+    }
 
     &__grid {
         display: grid;

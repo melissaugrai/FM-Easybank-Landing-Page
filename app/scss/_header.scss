@@ -44,6 +44,11 @@
         img {
             width: 8.6875rem;
             height: 1.25rem;
+            margin-top: .5625rem;
+            @include breakpoint-up(large){
+                margin-top: .5625rem;
+            }
+        
         }
     }
 
